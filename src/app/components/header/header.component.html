@@ -1,11 +1,29 @@
-<nav class="fixed w-full z-50 top-0">
-  <div class="container-fluid mx-auto px-4">
-    <div class="flex justify-between items-center">
-      <a href="#" class="text-2xl  font-bold gradient-text px-8 ">Portfolio</a>
-      <div class="flex space-x-6">
-        <a href="#tech-stack" class=" btn btn-secondary">Tech Stack</a>
-        <a href="#projects" class=" btn btn-secondary">Projects</a>
-        <a href="#contact" class=" btn btn-secondary">Contact</a>
+<nav class="fixed w-full z-50 top-0 bg-[#0f172a]/80 backdrop-blur-sm">
+  <div class="container mx-auto px-4">
+    <div class="flex justify-between items-center py-4">
+      <a href="#" class="text-xl md:text-2xl font-bold gradient-text">Portfolio</a>
+      
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex space-x-4 md:space-x-6">
+        <a href="#tech-stack" class="btn btn-secondary text-sm md:text-base">Tech Stack</a>
+        <a href="#projects" class="btn btn-secondary text-sm md:text-base">Projects</a>
+        <a href="#contact" class="btn btn-secondary text-sm md:text-base">Contact</a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button class="md:hidden text-white focus:outline-none" (click)="toggleMenu()">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div class="md:hidden" [class.hidden]="!isMenuOpen">
+      <div class="flex flex-col space-y-2 py-4">
+        <a href="#tech-stack" class="btn btn-secondary text-sm w-full text-center">Tech Stack</a>
+        <a href="#projects" class="btn btn-secondary text-sm w-full text-center">Projects</a>
+        <a href="#contact" class="btn btn-secondary text-sm w-full text-center">Contact</a>
       </div>
     </div>
   </div>

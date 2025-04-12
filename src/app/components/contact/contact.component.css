@@ -57,3 +57,39 @@ h2.section-title {
   font-size: 1.1rem;
   color: var(--text-secondary);
 }
+
+@media (max-width: 768px) {
+  .section {
+    padding: 2rem 0;
+  }
+
+  .contact-container {
+    padding: 1.5rem;
+  }
+
+  h2.section-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-link {
+    padding: 0.75rem;
+  }
+
+  .contact-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+
+  .contact-text {
+    font-size: 1rem;
+  }
+
+  .flex-1 {
+    flex: 1 1 100%;
+  }
+
+  .flex-col {
+    flex-direction: column;
+  }
+}
