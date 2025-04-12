@@ -1,0 +1,17 @@
+<section id="projects" class="section section-transition">
+  <div class="container mx-auto px-4">
+    <h2 class="text-center mb-12">🚀 Projects</h2>
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <div *ngFor="let project of projects" class="card">
+        <h3 class="project-title">
+          <span class="project-icon">{{ project.icon }}</span>
+          {{ project.title }}
+        </h3>
+        <p class="project-description">{{ project.description }}</p>
+        <div>
+          <span *ngFor="let tech of project.tech" class="tech-tag">{{ tech }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

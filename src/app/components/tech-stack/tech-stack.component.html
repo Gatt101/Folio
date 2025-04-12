@@ -1,0 +1,17 @@
+<section id="tech-stack" class="section">
+  <div class="container">
+    <h2 class="section-title">Tech Stack</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div *ngFor="let tech of techStack" class="card">
+        <h3 class="tech-title">
+          <span class="tech-icon">{{ tech.icon }}</span>
+          {{ tech.category }}
+        </h3>
+        <div class="tech-badges-container">
+          <span *ngFor="let item of tech.techs" class="tech-badge {{tech.category}}">{{ item }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  
