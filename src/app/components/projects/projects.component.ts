@@ -28,7 +28,7 @@ export class ProjectsComponent {
       title: 'Sentimental Analysis',
       description: 'Built a sentimental analaysis system for textual data',
       tech: ['Flask', 'Angular','NLP','Render'],
-      icon: '🧠',
+      icon: '🖹',
       viewCode: 'https://github.com/Gatt101/Sentimental_Analysis',
       link:'https://sentimental-analysis-gatt101s-projects.vercel.app'
     },
@@ -47,6 +47,15 @@ export class ProjectsComponent {
       icon: '🌳',
       viewCode: '',
       link:''
+    },
+    {
+      title: 'Simulation of Malware Detection System',
+      description: 'Prepared a demo for a malware detection System, made use of Cryptography and System Security concepts.Used AES Algorithm for encryption and decryption.',
+      tech: ['YOLOv8', 'GIS', 'Flask', 'Segmentation'],
+      icon: '🔒',
+      viewCode: '',
+      link:''
     }
+
   ];
 }

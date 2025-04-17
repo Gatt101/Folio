@@ -12,7 +12,7 @@ export class TechStackComponent {
   techStack = [
     {
       category: 'Frontend',
-      techs: ['Angular', 'TypeScript', 'React'],
+      techs: ['Angular', 'TypeScript', 'JavaScript', 'HTML', 'CSS'],
       icon: '📱'
     },
     {
@@ -22,23 +22,23 @@ export class TechStackComponent {
     },
     {
       category: 'Database',
-      techs: ['MySQL', 'MongoDB'],
+      techs: ['MySQL', 'MongoDB', 'PostgreSQL', 'SQLite'],
       icon: '🗄️'
     },
     {
       category: 'AI/ML',
-      techs: ['Hugging Face', 'YOLOv8', 'LLMs'],
+      techs: [ 'Object Detection', 'LLMs', 'Fine-tuning'],
       icon: '🤖'
     },
     {
       category: 'DevOps',
-      techs: ['Docker', 'Firebase'],
+      techs: ['Docker'],
       icon: '⚙️'
     },
     {
       category: 'UI/UX',
-      techs: ['Framer Motion', 'Tailwind CSS'],
+      techs: ['Tailwind CSS' , 'Bootstrap', 'Figma'],
       icon: '🎨'
     }
-  ];  
+  ];
 }
