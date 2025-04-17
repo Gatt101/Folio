@@ -51,10 +51,10 @@ export class ProjectsComponent {
     {
       title: 'Simulation of Malware Detection System',
       description: 'Prepared a demo for a malware detection System, made use of Cryptography and System Security concepts.Used AES Algorithm for encryption and decryption.',
-      tech: ['YOLOv8', 'GIS', 'Flask', 'Segmentation'],
+      tech: ['Cryptography', 'System Security', 'Flask', 'Angular'],
       icon: '🔒',
-      viewCode: '',
-      link:''
+      viewCode: 'https://github.com/Gatt101/CSS',
+      link:'https://css-psi-sand.vercel.app'
     }
 
   ];
