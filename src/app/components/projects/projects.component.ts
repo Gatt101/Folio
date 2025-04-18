@@ -55,6 +55,22 @@ export class ProjectsComponent {
       icon: '🔒',
       viewCode: 'https://github.com/Gatt101/CSS',
       link:'https://css-psi-sand.vercel.app'
+    },
+    {
+      title: 'BLogging Website ',
+      description: 'Developed a simple blogging website using Springboot and Angular with MongoDB as database',
+      tech: ['Spring Boot', 'Angular', 'MongoDB'],
+      icon: '🤖',
+      viewCode: 'https://github.com/Gatt101/BlogApp_Frontend',
+      link:'https://blog-app-frontend-flame.vercel.app'
+    },
+    {
+      title: 'M-toolKit',
+      description: 'A simple toolkit application for Mathematics, which includes a calculator, unit converter, and a simple fomulas section.',
+      tech: ['Java', 'Swing'],
+      icon: '📝',
+      viewCode: 'https://github.com/Gatt101/Swing_pro',
+      link:''
     }
 
   ];
