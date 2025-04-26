@@ -92,30 +92,57 @@
 }
 
 @media (max-width: 768px) {
+  .section {
+    padding: 1.5rem 0;
+    scroll-margin-top: 3rem;
+  }
+
   .container {
     padding: 0 1rem;
   }
-  
+
   .card {
     min-height: 180px;
+    padding: 1.5rem;
   }
-  
+
   .section-title {
     font-size: 2rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
   }
-  
+
   .project-title {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
   }
-  
+
+  .project-description {
+    font-size: 0.9rem;
+  }
+
   .tech-tag {
     font-size: 0.8rem;
-    min-width: 70px;
+    padding: 0.4rem 0.8rem;
   }
-  
-  .section {
-    padding: 1.5rem 0;
-    scroll-margin-top: 3.5rem;
+  .btn {
+    font-size: 0.85rem; /* Reduce font size for better fit */
+    padding: 0.4rem 0.8rem; /* Adjust padding for smaller buttons */
+  }
+
+  .btn-primary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%; /* Ensure buttons take full width */
+    margin-bottom: 0.5rem; /* Add spacing between buttons */
+  }
+
+  .btn-primary span {
+    gap: 0.5rem; /* Reduce gap between icon and text */
+  }
+
+  .btn-primary svg {
+    width: 1rem; /* Adjust icon size */
+    height: 1rem;
   }
 }

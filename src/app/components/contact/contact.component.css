@@ -60,36 +60,28 @@ h2.section-title {
 
 @media (max-width: 768px) {
   .section {
-    padding: 2rem 0;
+    padding: 1.5rem 0;
   }
 
   .contact-container {
-    padding: 1.5rem;
+    padding: 1rem;
   }
 
   h2.section-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin-bottom: 1.5rem;
   }
 
   .contact-link {
-    padding: 0.75rem;
+    padding: 0.5rem;
   }
 
   .contact-icon {
-    width: 1.25rem;
-    height: 1.25rem;
+    width: 1rem;
+    height: 1rem;
   }
 
   .contact-text {
-    font-size: 1rem;
-  }
-
-  .flex-1 {
-    flex: 1 1 100%;
-  }
-
-  .flex-col {
-    flex-direction: column;
+    font-size: 0.9rem;
   }
 }

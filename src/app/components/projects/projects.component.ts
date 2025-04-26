@@ -57,7 +57,7 @@ export class ProjectsComponent {
       link:'https://css-psi-sand.vercel.app'
     },
     {
-      title: 'BLogging Website ',
+      title: 'Blogging Website ',
       description: 'Developed a simple blogging website using Springboot and Angular with MongoDB as database',
       tech: ['Spring Boot', 'Angular', 'MongoDB'],
       icon: '🤖',
