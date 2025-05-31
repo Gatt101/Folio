@@ -11,7 +11,11 @@ export class ProjectsComponent {
   projects = [
     {
       title: 'Radiographic X-Ray Bone Fracture Severity Detection and Analysis',
-      description: 'Built a fracture detection system with X-ray image analysis and AI-generated orthopedic suggestions using fine-tuned LLMs.',
+      points: [
+        'Built a fracture detection system with X-ray image analysis',
+        'AI-generated orthopedic suggestions',
+        'Fine-tuned LLMs'
+      ],
       tech: ['YOLOv8', 'Flask', 'LLM', 'React'],
       icon: '🧠',
       viewCode: 'https://github.com/Gatt101/Bone_Fracture_Detection',
@@ -19,14 +23,19 @@ export class ProjectsComponent {
     },
     {
       title: 'E-Commerce Platform',
-      description: 'Designed a scalable, secure full-stack platform with user auth, cart, orders, and admin dashboard.',
+      points: [
+        'Scalable, secure full-stack platform',
+        'User authentication, cart, orders, admin dashboard'
+      ],
       tech: ['Angular', 'Spring Boot', 'JWT', 'MySQL'],
       icon: '🛒',
       viewCode: 'https://github.com/Gatt101/E-Commerce',
       link:'https://e-commerce-alpha-five-96.vercel.app'
     },{
       title: 'Sentimental Analysis',
-      description: 'Built a sentimental analaysis system for textual data',
+      points: [
+        'Sentiment analysis system for textual data'
+      ],
       tech: ['Flask', 'Angular','NLP','Render'],
       icon: '🖹',
       viewCode: 'https://github.com/Gatt101/Sentimental_Analysis',
@@ -34,7 +43,9 @@ export class ProjectsComponent {
     },
     {
       title: 'Text Summarizer',
-      description: 'Built an text summarizer using pipeline from transformers',
+      points: [
+        'Text summarizer using transformers pipeline'
+      ],
       tech: ['Flask', 'Angular','NLP','Render'],
       icon: '🧠',
       viewCode: 'https://github.com/Gatt101/AI-Text-Summarizer',
@@ -42,7 +53,10 @@ export class ProjectsComponent {
     },
     {
       title: 'Tree Enumeration & Forest Safety AI',
-      description: 'Developed a smart ML system that classifies spatial regions into residential and forest zones using satellite data.',
+      points: [
+        'Classifies spatial regions using satellite data',
+        'Residential and forest zone detection'
+      ],
       tech: ['YOLOv8', 'GIS', 'Flask', 'Segmentation'],
       icon: '🌳',
       viewCode: '',
@@ -50,7 +64,10 @@ export class ProjectsComponent {
     },
     {
       title: 'Simulation of Malware Detection System',
-      description: 'Prepared a demo for a malware detection System, made use of Cryptography and System Security concepts.Used AES Algorithm for encryption and decryption.',
+      points: [
+        'Demo for malware detection system',
+        'Uses AES algorithm for encryption and decryption'
+      ],
       tech: ['Cryptography', 'System Security', 'Flask', 'Angular'],
       icon: '🔒',
       viewCode: 'https://github.com/Gatt101/CSS',
@@ -58,7 +75,10 @@ export class ProjectsComponent {
     },
     {
       title: 'Blogging Website ',
-      description: 'Developed a simple blogging website using Springboot and Angular with MongoDB as database',
+      points: [
+        'Simple blogging website',
+        'Spring Boot, Angular, MongoDB'
+      ],
       tech: ['Spring Boot', 'Angular', 'MongoDB'],
       icon: '🤖',
       viewCode: 'https://github.com/Gatt101/BlogApp_Frontend',
@@ -66,12 +86,13 @@ export class ProjectsComponent {
     },
     {
       title: 'M-toolKit',
-      description: 'A simple toolkit application for Mathematics, which includes a calculator, unit converter, and a simple fomulas section.',
+      points: [
+        'Toolkit for mathematics: calculator, unit converter, formulas'
+      ],
       tech: ['Java', 'Swing'],
       icon: '📝',
       viewCode: 'https://github.com/Gatt101/Swing_pro',
       link:''
     }
-
   ];
 }
