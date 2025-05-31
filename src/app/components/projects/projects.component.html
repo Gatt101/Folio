@@ -1,7 +1,7 @@
 <section id="projects" class="section section-transition">
   <div class="container mx-auto px-4">
     <h2 class="text-center mb-12">🚀 Projects</h2>
-    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+    <div class="grid">
       <div *ngFor="let project of projects" class="card">
         <h3 class="project-title">
           <span class="project-icon">{{ project.icon }}</span>
@@ -13,7 +13,7 @@
         </div>
         <div class="flex flex-wrap gap-4 mt-auto">
           <a href="{{ project.viewCode }}" target="_blank" 
-             class="btn btn-primary flex-1 text-center py-2 px-4 rounded-lg bg-blue-600 hover:bg-blue-700 transition-colors">
+             class="btn btn-primary flex-1 text-center">
              <span class="flex items-center justify-center gap-2">
                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
@@ -22,7 +22,7 @@
              </span>
           </a>
           <a *ngIf="project.link!==''" href="{{ project.link }}" target="_blank"
-             class="btn btn-primary flex-1 text-center py-2 px-4 rounded-lg bg-green-600 hover:bg-green-700 transition-colors">
+             class="btn btn-primary flex-1 text-center" style="background:#059669;">
              <span class="flex items-center justify-center gap-2">
                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />

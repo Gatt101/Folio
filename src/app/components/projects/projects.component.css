@@ -1,7 +1,7 @@
 .section {
-  padding: 2rem 0;
+  padding: 2.5rem 0;
   background: transparent;
-  min-height:vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,24 +16,29 @@
   padding: 0 2rem;
 }
 
+.grid {
+  display: grid;
+  gap: 2.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  align-items: stretch;
+}
+
 .card {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 1rem;
-  padding: 2rem;
-  transition: all 0.3s ease;
-  height: 100%;
-  min-height: 200px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  background: rgba(30, 41, 59, 0.95);
+  border: 1px solid rgba(100, 116, 139, 0.15);
+  border-radius: 1.25rem;
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  transition: box-shadow 0.2s, transform 0.2s;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
+  min-height: 260px;
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.28);
+  transform: translateY(-4px) scale(1.02);
 }
 
 .section-title {
@@ -49,46 +54,101 @@
 }
 
 .project-title {
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 1.35rem;
+  font-weight: 700;
   color: #e2e8f0;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.1rem;
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.7rem;
 }
 
 .project-description {
-  color: #94a3b8;
-  margin-bottom: 1.5rem;
+  color: #a0aec0;
+  margin-bottom: 1.2rem;
   line-height: 1.6;
+  font-size: 1rem;
 }
 
 .tech-tag {
   display: inline-block;
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  font-size: 0.875rem;
+  padding: 0.35rem 0.9rem;
+  border-radius: 1rem;
+  font-size: 0.85rem;
   font-weight: 500;
-  color: white;
-  margin: 0.25rem;
-  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
-  transition: all 0.3s ease;
+  color: #e2e8f0;
+  background: rgba(51, 65, 85, 0.7);
+  margin: 0.15rem 0.25rem 0.15rem 0;
+  border: 1px solid rgba(100, 116, 139, 0.18);
+  transition: background 0.2s, color 0.2s;
 }
 
 .tech-tag:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background: rgba(71, 85, 105, 0.9);
+  color: #fff;
 }
 
 .project-icon {
-  font-size: 1.75rem;
+  font-size: 1.7rem;
   color: #60a5fa;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2.2rem;
+  height: 2.2rem;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 0.7rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+  box-shadow: 0 2px 8px rgba(30,41,59,0.08);
+  background: #334155;
+  color: #e0e7ef;
+  padding: 0.7rem 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.btn-primary {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+}
+
+.btn-primary:hover {
+  background: #1d4ed8;
+  color: #fff;
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 4px 16px rgba(37,99,235,0.12);
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .card {
+    padding: 1.2rem 0.8rem;
+    min-height: 180px;
+  }
+  .btn {
+    font-size: 0.95rem;
+    padding: 0.5rem 0.8rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -99,11 +159,6 @@
 
   .container {
     padding: 0 1rem;
-  }
-
-  .card {
-    min-height: 180px;
-    padding: 1.5rem;
   }
 
   .section-title {
@@ -122,27 +177,5 @@
   .tech-tag {
     font-size: 0.8rem;
     padding: 0.4rem 0.8rem;
-  }
-  .btn {
-    font-size: 0.85rem; /* Reduce font size for better fit */
-    padding: 0.4rem 0.8rem; /* Adjust padding for smaller buttons */
-  }
-
-  .btn-primary {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 100%; /* Ensure buttons take full width */
-    margin-bottom: 0.5rem; /* Add spacing between buttons */
-  }
-
-  .btn-primary span {
-    gap: 0.5rem; /* Reduce gap between icon and text */
-  }
-
-  .btn-primary svg {
-    width: 1rem; /* Adjust icon size */
-    height: 1rem;
   }
 }
