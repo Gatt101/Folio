@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
 export class ProjectsComponent {
   projects = [
     {
-      title: 'Radiographic X-Ray Bone Fracture Severity Detection and Analysis',
+      title: 'Radiographic X-Ray Bone Fracture Severity Detection',
       points: [
         'Built a fracture detection system with X-ray image analysis',
         'AI-generated orthopedic suggestions',
