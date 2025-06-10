@@ -19,7 +19,7 @@ export class ProjectsComponent {
       tech: ['YOLOv8', 'Flask', 'LLM', 'React'],
       icon: '🧠',
       viewCode: 'https://github.com/Gatt101/Bone_Fracture_Detection',
-      link:''
+      link:'https://orthopedic-agent.vercel.app'
     },
     {
       title: 'E-Commerce Platform',
