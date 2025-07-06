@@ -125,24 +125,7 @@
   z-index: 2;
   pointer-events: none;
 }
-.word-morph-text {
-  display: inline-block;
-  font-size: 1rem;  /* Base desktop size */
-  font-weight: 100;
-  line-height: 1.2;
-  background: linear-gradient(135deg, #60a5fa, #a855f7);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 
-/* If the morph library wraps text inside <span>, style it too */
-.word-morph-text span {
-  font-size: inherit;
-  font-weight: inherit;
-  background: inherit;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 
 /* Responsive sizing for smaller screens */
 @media (max-width: 1024px) {
