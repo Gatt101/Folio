@@ -1,101 +1,199 @@
 .section {
-  padding: 6rem 0;
-  background: transparent;
-  min-height: 100vh;
+  padding: 1.5rem 0 1rem 0;
+  background: transparent !important;
+  min-height: unset;
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.tech-bg {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  background: repeating-radial-gradient(circle at 20% 30%, #3b82f6 0, #1e293b 2px, transparent 3px 100px);
+  opacity: 0.1; /* Slightly adjusted for better contrast */
+  animation: bgMove 30s linear infinite;
+}
+@keyframes bgMove {
+  0% { background-position: 0 0; }
+  100% { background-position: 100px 100px; }
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  background: transparent !important;
+}
+
+.grid {
+  display: grid;
+  gap: 1.2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  width: 100%;
+  justify-items: center;
 }
 
 .card {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 1rem;
-  padding: 2rem;
-  transition: all 0.3s ease;
-  height: 100%;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  background: rgba(24, 32, 54, 0.8); /* Slightly darker card background */
+  border: 1.5px solid rgba(100, 116, 139, 0.2);
+  border-radius: 1.25rem;
+  padding: 1rem;
+  transition: box-shadow 0.3s, border-color 0.3s, transform 0.3s;
+  box-shadow: 0 8px 32px 0 rgba(16, 21, 40, 0.3);
+  backdrop-filter: blur(8px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 180px;
+  width: 100%;
+  max-width: 340px;
+  position: relative;
+  overflow: hidden;
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-  background: rgba(255, 255, 255, 0.08);
+  border-color: #60a5fa; /* Adjusted to match hero section gradient */
+  box-shadow: 0 0 24px 0 #60a5fa, 0 8px 32px 0 rgba(16, 21, 40, 0.35);
+  transform: translateY(-6px) scale(1.03);
 }
 
 .section-title {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   font-weight: 700;
-  background: linear-gradient(135deg, #60a5fa, #a855f7);
+  color: #e2e8f0;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+  background: linear-gradient(135deg, #60a5fa, #a855f7); /* Matching hero section gradient */
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-align: center;
-  margin-bottom: 3rem;
+  animation: fadeInDown 0.8s cubic-bezier(.77,0,.18,1) both;
+}
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px);}
+  to { opacity: 1; transform: translateY(0);}
 }
 
 .tech-title {
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 600;
   color: #e2e8f0;
-  margin-bottom: 1rem;
+  margin-bottom: 0.6rem;
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.6rem;
+}
+
+.tech-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: rgba(96, 165, 250, 0.12); /* Adjusted to match hero section blue */
+  box-shadow: 0 0 8px 2px rgba(96, 165, 250, 0.15);
+  font-size: 1.1rem;
+  margin-right: 0.4rem;
+  transition: background 0.3s;
+}
+.card:hover .tech-icon {
+  background: rgba(96, 165, 250, 0.22);
+}
+
+.tech-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
 }
 
 .tech-badge {
   display: inline-block;
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  font-size: 0.875rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
   font-weight: 500;
-  color: white;
-  margin: 0.25rem;
-  transition: all 0.3s ease;
+  color: #e0e7ef;
+  background: #22304a;
+  margin: 0.15rem 0.2rem 0.15rem 0;
+  box-shadow: 0 1px 4px rgba(30, 41, 59, 0.12);
+  transition: box-shadow 0.3s, background 0.3s;
 }
-
 .tech-badge:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background: #334155;
+  box-shadow: 0 0 8px 2px #60a5fa;
 }
 
-.tech-badge.Frontend {
-  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
-}
-
-.tech-badge.Backend {
-  background: linear-gradient(135deg, #a855f7, #7c3aed);
-}
-
-.tech-badge.Database {
-  background: linear-gradient(135deg, #22c55e, #15803d);
-}
-
-.tech-badge.AI\/ML {
-  background: linear-gradient(135deg, #ef4444, #b91c1c);
-}
-
-.tech-badge.DevOps {
-  background: linear-gradient(135deg, #eab308, #a16207);
-}
-
+.tech-badge.Frontend,
+.tech-badge.Backend,
+.tech-badge.Database,
+.tech-badge.AI\/ML,
+.tech-badge.DevOps,
 .tech-badge.UI\/UX {
-  background: linear-gradient(135deg, #6366f1, #4338ca);
+  background: #22304a;
 }
 
-.tech-icon {
-  font-size: 1.5rem;
-  color: #60a5fa;
-}
-
-/* Add icons to category titles */
 h3::before {
   content: '';
-  display: inline-block;
-  width: 24px;
-  height: 24px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  opacity: 0.8;
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .section {
+    padding: 1rem 0 0.8rem 0;
+  }
+  .grid {
+    gap: 1rem;
+  }
+  .card {
+    min-height: 140px;
+    padding: 0.9rem;
+    max-width: 100%;
+  }
+  .section-title {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 0.8rem 0 0.5rem 0;
+  }
+  .container {
+    padding: 0 0.5rem;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+  }
+  .card {
+    min-height: 120px;
+    padding: 0.6rem;
+    max-width: 100%;
+  }
+  .section-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.7rem;
+  }
+  .tech-title {
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+  }
+  .tech-badge {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.5rem;
+  }
 }

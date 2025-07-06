@@ -1,14 +1,15 @@
-import { NgClass } from '@angular/common';
+import { NgClass, NgFor } from '@angular/common';
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-tech-stack',
-  imports: [CommonModule],
+  imports: [CommonModule, NgFor],
   templateUrl: './tech-stack.component.html',
   styleUrl: './tech-stack.component.css'
 })
 export class TechStackComponent {
+  title = 'Tech Stack';
   techStack = [
     {
       category: 'Frontend',
@@ -27,7 +28,7 @@ export class TechStackComponent {
     },
     {
       category: 'AI/ML',
-      techs: [ 'Object Detection', 'LLMs', 'Fine-tuning'],
+      techs: ['Object Detection', 'LLMs', 'Fine-tuning'],
       icon: '🤖'
     },
     {
@@ -37,7 +38,7 @@ export class TechStackComponent {
     },
     {
       category: 'UI/UX',
-      techs: ['Tailwind CSS' , 'Bootstrap', 'Figma'],
+      techs: ['Tailwind CSS', 'Bootstrap', 'Figma'],
       icon: '🎨'
     }
   ];

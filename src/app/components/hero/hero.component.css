@@ -3,8 +3,29 @@
   min-height: 100vh;
   width: 100%;
   overflow: hidden;
-  background: linear-gradient(to bottom, #0f172a, #1e293b);
   color: white;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero-bg {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  background: repeating-radial-gradient(circle at 20% 30%, #3b82f6 0, #1e293b 2px, transparent 3px 100px);
+  opacity: 0.07;
+  animation: bgMove 30s linear infinite;
+}
+@keyframes bgMove {
+  0% { background-position: 0 0; }
+  100% { background-position: 100px 100px; }
+}
+
+.hero-container > *:not(.hero-bg) {
+  position: relative;
+  z-index: 1;
 }
 
 .hero-container canvas {
@@ -20,48 +41,49 @@
 .text-content {
   position: relative;
   z-index: 20;
-  padding-top: 80px;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 20px;
+  text-align: center;
 }
 
-.text-content a, .text-content button {
-  pointer-events: auto;
+.text-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-/* Style specific to text on the 3D background */
-.hero-container h1 {
-  font-size: 4rem;
+.text-content h1 {
+  font-size: 3rem;
   font-weight: 800;
   background: linear-gradient(135deg, #60a5fa, #a855f7);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-bottom: 1.5rem;
-  filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.3));
+  margin-bottom: 1rem;
 }
 
-.hero-container h2 {
-  font-size: 1.5rem;
+.text-content h2 {
+  font-size: 1.25rem;
   font-weight: 600;
   color: #e2e8f0;
-  margin-bottom: 2rem;
-  line-height: 1.4;
+  margin-bottom: 1.5rem;
 }
 
-.hero-container p {
-  font-size: 1.2rem;
+.text-content p {
+  font-size: 1rem;
   line-height: 1.6;
   color: #e2e8f0;
-  max-width: 800px;
-  margin: 0 auto 2rem auto;
+  margin-bottom: 2rem;
   background: rgba(15, 23, 42, 0.7);
   padding: 1.5rem;
   border-radius: 1rem;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .btn {
@@ -70,6 +92,8 @@
   font-weight: 600;
   border-radius: 0.5rem;
   transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .btn-primary {
@@ -90,7 +114,6 @@
   box-shadow: 0 12px 30px rgba(96, 165, 250, 0.5);
 }
 
-/* Add a subtle overlay for depth */
 .hero-container::after {
   content: '';
   position: absolute;
@@ -102,25 +125,94 @@
   z-index: 2;
   pointer-events: none;
 }
+.word-morph-text {
+  display: inline-block;
+  font-size: 1rem;  /* Base desktop size */
+  font-weight: 100;
+  line-height: 1.2;
+  background: linear-gradient(135deg, #60a5fa, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* If the morph library wraps text inside <span>, style it too */
+.word-morph-text span {
+  font-size: inherit;
+  font-weight: inherit;
+  background: inherit;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Responsive sizing for smaller screens */
+@media (max-width: 1024px) {
+  .word-morph-text {
+    font-size: 2.5rem;
+  }
+}
 
 @media (max-width: 768px) {
-  .hero-container h1 {
+  .word-morph-text {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .text-content h1 {
     font-size: 2.5rem;
-    margin-bottom: 1rem;
   }
-
-  .hero-container h2 {
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
+  .text-content h2 {
+    font-size: 1.1rem;
   }
-
-  .hero-container p {
-    font-size: 1rem;
+  .text-content p {
+    font-size: 0.9rem;
     padding: 1rem;
   }
-
   .btn {
+    padding: 0.6rem 1.5rem;
+    font-size: 1rem;
+  }
+  .word-morph-text {
+    font-size: 2rem;  /* Adjust as needed */
+    font-weight: 700; /* Optional: make bold */
+    text-align: center; /* Optional: center align */
+    color: #fff; /* Optional: match your theme */
+  }
+  
+}
+
+@media (max-width: 768px) {
+  .text-content h1 {
+    font-size: 2rem;
+  }
+  .text-content h2 {
+    font-size: 1rem;
+  }
+  .text-content p {
+    font-size: 0.85rem;
+    padding: 0.8rem;
+  }
+  .btn {
+    padding: 0.5rem 1rem;
     font-size: 0.9rem;
-    padding: 0.5rem 1.5rem;
+  }
+  .button-group {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+.hero-morph-title {
+  font-size: 2.5rem !important;
+  line-height: 1.1;
+  font-weight: 800;
+  display: inline-block;
+  margin-bottom: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .hero-morph-title {
+    font-size: 1.5rem !important;
+    margin-bottom: 0.8rem;
   }
 }
