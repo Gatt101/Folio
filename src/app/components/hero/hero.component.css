@@ -20,7 +20,7 @@
   pointer-events: none;
   background: repeating-radial-gradient(circle at 20% 30%, #3b82f6 0, #1e293b 2px, transparent 3px 100px);
   opacity: 0.06;
-  animation: bgMove 50s linear infinite; /* Slower for mobile performance */
+  animation: bgMove 50s linear infinite;
 }
 
 @keyframes bgMove {
@@ -48,6 +48,7 @@
   z-index: 20;
   padding: 1.5rem;
   text-align: center;
+  margin: 0 auto;
 }
 
 .text-wrapper {
@@ -91,8 +92,8 @@
   display: flex;
   gap: 0.75rem;
   justify-content: center;
-  flex-wrap: wrap;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .btn {
@@ -155,20 +156,26 @@ om-orb {
 /* Mobile-specific styles */
 @media (max-width: 768px) {
   .hero-container {
-    min-height: 80vh; /* Shorter for mobile scrolling */
+    min-height: 80vh;
     padding: 1rem;
+    align-items: center;
+    justify-content: center;
   }
 
   .hero-container > div {
-    flex-direction: column !important; /* Force column layout */
+    flex-direction: column !important;
     padding: 1rem;
     max-width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
   }
 
   .text-content {
     padding: 1rem;
     text-align: center;
     width: 100%;
+    margin: 0 auto;
   }
 
   .text-content h1,
@@ -201,6 +208,9 @@ om-orb {
     flex-direction: column;
     gap: 0.5rem;
     width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
   }
 
   .btn {
@@ -209,6 +219,7 @@ om-orb {
     width: 100%;
     max-width: 280px;
     min-height: 48px;
+    margin: 0 auto;
   }
 
   om-orb {
@@ -219,14 +230,15 @@ om-orb {
 
   .hero-bg {
     opacity: 0.04;
-    animation-duration: 60s; /* Even slower for performance */
+    animation-duration: 60s;
   }
 
-  /* Remove large-screen translations */
   [class*="translate-x-"],
-  [class*="pl-"] {
+  [class*="pl-"],
+  [class*="ml-"] {
     transform: none !important;
     padding-left: 0 !important;
+    margin-left: 0 !important;
   }
 }
 
@@ -259,6 +271,7 @@ om-orb {
     font-size: 0.9rem;
     min-height: 44px;
     max-width: 240px;
+    margin: 0 auto;
   }
 
   om-orb {
