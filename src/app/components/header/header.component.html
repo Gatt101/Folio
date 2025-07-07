@@ -15,11 +15,12 @@
       </button>
     </div>
     <!-- Mobile Navigation -->
-    <div class="md:hidden" [class.hidden]="!isMenuOpen">
-      <div class="flex flex-col space-y-2 py-4">
-        <a href="#tech-stack" class="btn btn-secondary text-sm w-full text-center font-semibold">Tech Stack</a>
-        <a href="#projects" class="btn btn-secondary text-sm w-full text-center">Projects</a>
-        <a href="#contact" class="btn btn-secondary text-sm w-full text-center">Contact</a>
+    <div class="md:hidden fixed inset-0 bg-black bg-opacity-80 z-50 transition-all duration-300" [class.hidden]="!isMenuOpen">
+      <div class="flex flex-col items-center justify-center h-full space-y-6">
+        <a href="#tech-stack" class="btn btn-secondary text-lg w-4/5 text-center font-semibold py-4 rounded-lg">Tech Stack</a>
+        <a href="#projects" class="btn btn-secondary text-lg w-4/5 text-center py-4 rounded-lg">Projects</a>
+        <a href="#contact" class="btn btn-secondary text-lg w-4/5 text-center py-4 rounded-lg">Contact</a>
+        <button class="mt-8 text-white text-2xl" (click)="toggleMenu()">Close ✕</button>
       </div>
     </div>
   </div>

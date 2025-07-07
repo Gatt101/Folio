@@ -12,6 +12,7 @@ import { NgxWordMorphComponent } from '@omnedia/ngx-word-morph';
 })
 export class HeroComponent {
   isBrowser: boolean;
+  isMobile: boolean = false;
   title = 'Gaurav Patil';
   subtitle = 'Full-Stack Developer | AI Enthusiast | Builder of Impactful Software';
   description = 'Welcome to my digital playground. I\'m passionate about building full-stack apps, training AI models, and solving real-world problems through code.';
@@ -20,5 +21,13 @@ export class HeroComponent {
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {
     this.isBrowser = isPlatformBrowser(this.platformId);
+    if (this.isBrowser) {
+      this.checkMobile();
+      window.addEventListener('resize', this.checkMobile.bind(this));
+    }
+  }
+
+  checkMobile() {
+    this.isMobile = window.innerWidth <= 768;
   }
 }
