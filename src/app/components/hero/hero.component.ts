@@ -14,8 +14,8 @@ export class HeroComponent {
   isBrowser: boolean;
   isMobile: boolean = false;
   title = 'Gaurav Patil';
-  subtitle = 'Full-Stack Developer | AI Enthusiast | Builder of Impactful Software';
-  description = 'Welcome to my digital playground. I\'m passionate about building full-stack apps, training AI models, and solving real-world problems through code.';
+  subtitle = 'Full-Stack Developer | Java Developer | AI Enthusiast ';
+  description = 'I\'m passionate about building full-stack apps, training AI models, and solving real-world problems through code.';
   projectsLink = '/projects';
   contactLink = '/contact';
 

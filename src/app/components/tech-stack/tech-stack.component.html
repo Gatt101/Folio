@@ -1,17 +1,52 @@
-  <section class="section">
-  <div class="tech-bg"></div>
-  <div class="container">
-    <h2 class="section-title">{{ title }}</h2>
-    <div class="grid">
-      <div class="card" *ngFor="let tech of techStack">
-        <h3 class="tech-title">
-          <span class="tech-icon">{{ tech.icon }}</span>
-          {{ tech.category }}
-        </h3>
-        <div class="tech-badges">
-          <span class="tech-badge {{ tech.category }}" *ngFor="let item of tech.techs">{{ item }}</span>
-        </div>
-      </div>
+<!-- Add Devicon CSS for icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+
+<div class="tech-stack-container">
+  <div class="tech-stack-bg"></div>
+  
+  <!-- Tech Stack Section -->
+  <div class="tech-section">
+    <h2 class="section-title">
+      <span class="title-main">Frameworks & Tools</span>
+    </h2>
+    <div class="marquee-wrapper">
+      <om-marquee>
+        <ng-template>
+          <div class="tech-cards">
+            <div class="tech-card" *ngFor="let tech of frameworksAndTools">
+              <i [ngClass]="tech.icon" class="tech-icon"></i>
+              <h3 class="tech-name">{{ tech.name }}</h3>
+              <p class="tech-description">{{ tech.description }}</p>
+            </div>
+          </div>
+        </ng-template>
+      </om-marquee>
+      <div class="marquee-gradient left"></div>
+      <div class="marquee-gradient right"></div>
     </div>
   </div>
-</section>
+
+  <!-- Languages & Databases Section -->
+  <div class="tech-section">
+    <h2 class="section-title">
+      <span class="title-main">Languages & Databases</span>
+    </h2>
+    <div class="marquee-wrapper">
+      <om-marquee [reverse]="true">
+        <ng-template>
+          <div class="tech-cards">
+            <div class="tech-card" *ngFor="let tech of languagesAndDatabases">
+              <i [ngClass]="tech.icon" class="tech-icon"></i>
+              <h3 class="tech-name">{{ tech.name }}</h3>
+              <p class="tech-description">{{ tech.description }}</p>
+            </div>
+          </div>
+        </ng-template>
+      </om-marquee>
+      <div class="marquee-gradient left"></div>
+      <div class="marquee-gradient right"></div>
+    </div>
+  </div>
+</div>
+ 
+ 
