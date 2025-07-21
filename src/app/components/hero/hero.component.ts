@@ -2,13 +2,14 @@ import { Component, Inject, PLATFORM_ID } from '@angular/core';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { NgxOrbComponent } from '@omnedia/ngx-orb';
 import { NgxWordMorphComponent } from '@omnedia/ngx-word-morph';
+import { ScrollAnimationDirective } from '../../directives/scroll-animation.directive';
 
 @Component({
   selector: 'app-hero',
   templateUrl: './hero.component.html',
   styleUrls: ['./hero.component.css'],
   standalone: true,
-  imports: [CommonModule, NgxOrbComponent , NgxWordMorphComponent]
+  imports: [CommonModule, NgxOrbComponent, NgxWordMorphComponent]
 })
 export class HeroComponent {
   isBrowser: boolean;

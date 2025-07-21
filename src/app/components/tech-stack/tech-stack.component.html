@@ -4,20 +4,18 @@
 <div class="tech-stack-container">
   <div class="tech-stack-bg"></div>
   
-  <!-- Tech Stack Section -->
+  <!-- Frameworks & Tools Section -->
   <div class="tech-section">
     <h2 class="section-title">
       <span class="title-main">Frameworks & Tools</span>
     </h2>
     <div class="marquee-wrapper">
       <om-marquee>
-        <ng-template>
-          <div class="tech-cards">
-            <div class="tech-card" *ngFor="let tech of frameworksAndTools">
-              <i [ngClass]="tech.icon" class="tech-icon"></i>
-              <h3 class="tech-name">{{ tech.name }}</h3>
-              <p class="tech-description">{{ tech.description }}</p>
-            </div>
+        <ng-template *ngFor="let tech of frameworksAndTools">
+          <div class="tech-card flex flex-col items-center">
+            <i [ngClass]="tech.icon" class="tech-icon text-4xl mb-2"></i>
+            <h3 class="tech-name font-semibold">{{ tech.name }}</h3>
+            <p class="tech-description text-xs text-center text-gray-500">{{ tech.description }}</p>
           </div>
         </ng-template>
       </om-marquee>
@@ -32,14 +30,12 @@
       <span class="title-main">Languages & Databases</span>
     </h2>
     <div class="marquee-wrapper">
-      <om-marquee [reverse]="true">
-        <ng-template>
-          <div class="tech-cards">
-            <div class="tech-card" *ngFor="let tech of languagesAndDatabases">
-              <i [ngClass]="tech.icon" class="tech-icon"></i>
-              <h3 class="tech-name">{{ tech.name }}</h3>
-              <p class="tech-description">{{ tech.description }}</p>
-            </div>
+      <om-marquee>
+        <ng-template *ngFor="let tech of languagesAndDatabases">
+          <div class="tech-card flex flex-col items-center">
+            <i [ngClass]="tech.icon" class="tech-icon text-4xl mb-2"></i>
+            <h3 class="tech-name font-semibold">{{ tech.name }}</h3>
+            <p class="tech-description text-xs text-center text-gray-500">{{ tech.description }}</p>
           </div>
         </ng-template>
       </om-marquee>
@@ -48,5 +44,3 @@
     </div>
   </div>
 </div>
- 
- 

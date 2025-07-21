@@ -2,6 +2,7 @@ import { NgClass, NgFor } from '@angular/common';
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NgxMarqueeComponent } from '@omnedia/ngx-marquee';
+import { ScrollAnimationDirective } from '../../directives/scroll-animation.directive';
 
 @Component({
   selector: 'app-tech-stack',
@@ -61,7 +62,7 @@ export class TechStackComponent {
       }
     ];
     
-    languagesAndDatabases = [
+    languagesAndDatabases = Array.from(new Set([
       {
         name: 'Java',
         description: 'Core language for enterprise backend development',
@@ -102,5 +103,5 @@ export class TechStackComponent {
         description: 'Widely-used relational DBMS',
         icon: 'devicon-mysql-plain colored'
       }
-    ];
+    ]));
 }
