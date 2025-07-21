@@ -53,17 +53,14 @@
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.marquee-wrapper {
-  position: relative;
+/* New container for static display */
+.tech-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
   width: 100%;
   max-width: 1200px;
-  overflow: hidden;
-}
-
-.tech-cards {
-  display: flex;
-  gap: 1.5rem;
-  padding: 0 1rem;
 }
 
 .tech-card {
@@ -123,35 +120,9 @@
   align-items: center;
   justify-content: center;
 }
-.marquee-gradient.left {
-  left: 0;
-  background: linear-gradient(to right, #1e293b, transparent);
-}
 
-.marquee-gradient.right {
-  right: 0;
-  background: linear-gradient(to left, #1e293b, transparent);
-}
-
-
-.marquee-gradient {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 100px;
-  z-index: 2;
-  pointer-events: none;
-}
-
-.marquee-gradient.left {
-  left: 0;
-  background: linear-gradient(to right, transparent, rgba(0,0,0,0.1));
-}
-
-.marquee-gradient.right {
-  right: 0;
-  background: linear-gradient(to left, transparent, rgba(0,0,0,0.1));
-}
+/* Remove all marquee-related styles */
+/* .marquee-wrapper, .tech-cards, .marquee-gradient { removed } */
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -159,36 +130,35 @@
     padding: 2rem 0;
     gap: 3rem;
   }
-  
+
   .section-title {
     font-size: 1.8rem;
   }
-  
-  .tech-cards {
+
+  .tech-cards-container {
     gap: 1rem;
-    padding: 0 0.5rem;
   }
-  
+
   .tech-card {
     width: 240px;
     height: 180px;
     padding: 1rem;
   }
-  
+
   .tech-icon {
     width: 50px;
     height: 50px;
     font-size: 2rem;
   }
-  
+
   .tech-name {
     font-size: 1.1rem;
   }
-  
+
   .tech-description {
     font-size: 0.8rem;
   }
-  
+
   .tech-stack-bg {
     opacity: 0.03;
   }

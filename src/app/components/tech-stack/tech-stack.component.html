@@ -3,44 +3,28 @@
 
 <div class="tech-stack-container">
   <div class="tech-stack-bg"></div>
-  
+
   <!-- Frameworks & Tools Section -->
   <div class="tech-section">
-    <h2 class="section-title">
-      <span class="title-main">Frameworks & Tools</span>
-    </h2>
-    <div class="marquee-wrapper">
-      <om-marquee>
-        <ng-template *ngFor="let tech of frameworksAndTools">
-          <div class="tech-card flex flex-col items-center">
-            <i [ngClass]="tech.icon" class="tech-icon text-4xl mb-2"></i>
-            <h3 class="tech-name font-semibold">{{ tech.name }}</h3>
-            <p class="tech-description text-xs text-center text-gray-500">{{ tech.description }}</p>
-          </div>
-        </ng-template>
-      </om-marquee>
-      <div class="marquee-gradient left"></div>
-      <div class="marquee-gradient right"></div>
+    <h2 class="section-title">Frameworks & Tools</h2>
+    <div class="tech-cards-container">
+      <div *ngFor="let tech of frameworksAndTools" class="tech-card">
+        <div class="tech-icon"><i class="{{tech.icon}}"></i></div>
+        <h3 class="tech-name">{{ tech.name }}</h3>
+        <p class="tech-description">{{ tech.description }}</p>
+      </div>
     </div>
   </div>
 
   <!-- Languages & Databases Section -->
   <div class="tech-section">
-    <h2 class="section-title">
-      <span class="title-main">Languages & Databases</span>
-    </h2>
-    <div class="marquee-wrapper">
-      <om-marquee>
-        <ng-template *ngFor="let tech of languagesAndDatabases">
-          <div class="tech-card flex flex-col items-center">
-            <i [ngClass]="tech.icon" class="tech-icon text-4xl mb-2"></i>
-            <h3 class="tech-name font-semibold">{{ tech.name }}</h3>
-            <p class="tech-description text-xs text-center text-gray-500">{{ tech.description }}</p>
-          </div>
-        </ng-template>
-      </om-marquee>
-      <div class="marquee-gradient left"></div>
-      <div class="marquee-gradient right"></div>
+    <h2 class="section-title">Languages & Databases</h2>
+    <div class="tech-cards-container">
+      <div *ngFor="let tech of languagesAndDatabases" class="tech-card">
+        <div class="tech-icon"><i class="{{tech.icon}}"></i></div>
+        <h3 class="tech-name">{{ tech.name }}</h3>
+        <p class="tech-description">{{ tech.description }}</p>
+      </div>
     </div>
   </div>
 </div>
