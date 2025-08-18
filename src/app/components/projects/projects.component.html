@@ -2,36 +2,39 @@
   <div class="tech-bg"></div>
   <div class="container mx-auto px-4">
     <h2 class="text-center mb-12">🚀 Projects</h2>
-    <div class="grid">
-      <div *ngFor="let project of projects" class="card">
-        <h3 class="project-title">
-          <span class="project-icon">{{ project.icon }}</span>
-          {{ project.title }}
-        </h3>
-        <ul class="project-points">
-          <li *ngFor="let point of project.points">{{ point }}</li>
-        </ul>
-        <div class="flex flex-wrap gap-2 mb-4">
-          <span *ngFor="let tech of project.tech" class="tech-tag">{{ tech }}</span>
-        </div>
-        <div class="project-btn-row">
-          <a href="{{ project.viewCode }}" target="_blank" class="btn btn-primary">
-            <span class="flex items-center justify-center gap-2">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-              </svg>
-              View Code
-            </span>
-          </a>
-          <a *ngIf="project.link!==''" href="{{ project.link }}" target="_blank" class="btn btn-primary" style="background:#059669;">
-            <span class="flex items-center justify-center gap-2">
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-              </svg>
-              View Project
-            </span>
-          </a>
+    <div class="projects-grid">
+      <div *ngFor="let project of projects" class="project-card">
+        <div class="project-content">
+          <h3 class="project-title">
+            <span class="project-icon">{{ project.icon }}</span>
+            {{ project.title }}
+          </h3>
+          <div class="project-image-container">
+            <img [src]="project.image" [alt]="project.title" class="project-image">
+          </div>
+          <p class="project-description">
+            <span *ngFor="let point of project.points">{{ point }}<br></span>
+          </p>
+          <div class="project-btn-row">
+            <a href="{{ project.viewCode }}" target="_blank" class="btn btn-primary" *ngIf="project.viewCode">
+              <span class="flex items-center justify-center gap-2">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                </svg>
+                View Code
+              </span>
+            </a>
+            <a href="{{ project.link }}" target="_blank" class="btn btn-primary" style="background:#059669;" *ngIf="project.link">
+              <span class="flex items-center justify-center gap-2">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                </svg>
+                View Project
+              </span>
+            </a>
+          </div>
+          
         </div>
       </div>
     </div>
