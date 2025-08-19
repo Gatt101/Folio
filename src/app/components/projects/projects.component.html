@@ -1,4 +1,6 @@
 <section id="projects" class="section section-transition">
+  <!-- Add Devicon CSS for icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
   <div class="tech-bg"></div>
   <div class="container mx-auto px-4">
     <h2 class="text-center mb-12">🚀 Projects</h2>
@@ -15,6 +17,15 @@
           <p class="project-description">
             <span *ngFor="let point of project.points">{{ point }}<br></span>
           </p>
+          <div class="project-tech">
+            <h4 class="tech-stack-title">Tech Stack</h4>
+            <div class="tech-logo-grid">
+              <div *ngFor="let tech of project.tech" class="tech-logo-item" [title]="tech">
+                <i [class]="getTechIcon(tech)"></i>
+                <span class="tech-name">{{ tech }}</span>
+              </div>
+            </div>
+          </div>
           <div class="project-btn-row">
             <a href="{{ project.viewCode }}" target="_blank" class="btn btn-primary" *ngIf="project.viewCode">
               <span class="flex items-center justify-center gap-2">

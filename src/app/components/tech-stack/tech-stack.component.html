@@ -4,27 +4,23 @@
 <div class="tech-stack-container">
   <div class="tech-stack-bg"></div>
 
-  <!-- Frameworks & Tools Section -->
-  <div class="tech-section">
-    <h2 class="section-title">Frameworks & Tools</h2>
-    <div class="tech-cards-container">
-      <div *ngFor="let tech of frameworksAndTools" class="tech-card">
-        <div class="tech-icon"><i class="{{tech.icon}}"></i></div>
-        <h3 class="tech-name">{{ tech.name }}</h3>
-        <p class="tech-description">{{ tech.description }}</p>
-      </div>
-    </div>
-  </div>
+  <!-- Frameworks & Tools Section --> 
+  <div class="tech-section"> 
+    <h2 class="section-title">Frameworks & Tools</h2> 
+    <div class="tech-icons-grid"> 
+      <div *ngFor="let tech of frameworksAndTools" class="tech-icon-only"> 
+        <i class="{{tech.icon}}"></i> 
+      </div> 
+    </div> 
+  </div> 
 
   <!-- Languages & Databases Section -->
   <div class="tech-section">
     <h2 class="section-title">Languages & Databases</h2>
-    <div class="tech-cards-container">
-      <div *ngFor="let tech of languagesAndDatabases" class="tech-card">
-        <div class="tech-icon"><i class="{{tech.icon}}"></i></div>
-        <h3 class="tech-name">{{ tech.name }}</h3>
-        <p class="tech-description">{{ tech.description }}</p>
-      </div>
+    <div class="tech-icons-grid"> 
+      <div *ngFor="let tech of languagesAndDatabases" class="tech-icon-only"> 
+        <i class="{{tech.icon}}"></i> 
+      </div> 
     </div>
   </div>
 </div>
